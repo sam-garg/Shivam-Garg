@@ -3,7 +3,7 @@
 Welcome to the repository for my personal portfolio website. This project showcases my skills, experience, and projects as a Software Developer and Engineer specializing in AI/ML, Data Science, and Python development.
 
 ## 🚀 Live Demo
-Check out the live version of my portfolio here: [https://sam-garg.github.io/personal_website/](https://sam-garg.github.io/personal_website/)
+Check out the live version of my portfolio here: [https://sam-garg.github.io/personal_website](https://sam-garg.github.io/personal_website)
 
 ## 🛠 Features
 - **Modern & Responsive Design**: Built with HTML5, Vanilla CSS, and JavaScript.
