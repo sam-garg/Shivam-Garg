@@ -15,13 +15,17 @@
 }
 
 html {
-  font-size: 60%;
+  font-size: 62.5%;
+  /* Standard 10px base */
   overflow-x: hidden;
+  width: 100%;
 }
 
 body {
   background: var(--bg-color);
   color: var(--text-color);
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .header {
@@ -29,14 +33,21 @@ body {
   width: 100%;
   top: 0;
   left: 0;
-  padding: 2.5rem 15%;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(20px);
+  padding: 2rem clamp(2rem, 8vw, 15%);
+  background: rgba(8, 8, 8, 0.85);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  border-radius: 0 0 30px 30px;
+  transition: 0.3s;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 2rem 2.5rem;
+  }
 }
 
 .header::after {
@@ -79,13 +90,19 @@ span {
   color: transparent;
 }
 
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 4rem);
+}
+
 .navbar a {
   font-size: 1.8rem;
   color: var(--text-color);
-  margin-left: 4rem;
   font-weight: 500;
   transition: 0.3s ease-in-out;
   border-bottom: 3px solid transparent;
+  white-space: nowrap;
 }
 
 .navbar a:hover {
@@ -114,35 +131,53 @@ span {
 
 
 section {
-  min-height: 90vh;
-  padding: 10rem 15%;
+  min-height: auto;
+  padding: 8rem 2rem;
+  /* Consistent mobile padding */
+  width: 100%;
+  overflow: hidden;
+}
+
+@media (min-width: 1025px) {
+  section {
+    padding: 5rem 10%;
+  }
 }
 
 .home {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6rem;
+  gap: 4rem;
+  padding-top: 12rem;
 }
 
 .home-content {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  text-align: right;
+  align-items: center;
+  /* Centered for mobile */
+  text-align: center;
+  width: 100%;
+}
+
+@media (min-width: 1025px) {
+  .home-content {
+    align-items: flex-end;
+    text-align: right;
+  }
 }
 
 .home-content h1 {
-  font-size: 6.5rem;
-  /*8*/
-  font-weight: 600;
+  font-size: clamp(3.5rem, 10vw, 6.5rem);
+  font-weight: 800;
   margin-top: 1.5rem;
-  line-height: 1;
+  line-height: 1.1;
 }
 
 .home-content h3 {
-  margin: 1rem 0;
-  font-size: 4rem;
+  margin: 1.5rem 0;
+  font-size: clamp(2rem, 5vw, 4rem);
 }
 
 .home-content p {
@@ -250,8 +285,9 @@ section {
 
 .heading {
   text-align: center;
-  font-size: 7rem;
-  margin: 5rem 0;
+  font-size: clamp(2.5rem, 8vw, 7rem);
+  margin: 4rem 0;
+  word-wrap: break-word;
 }
 
 .services {
@@ -321,9 +357,10 @@ section {
 
 .project-box {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  /* Fits iPhone SE */
   gap: 3rem;
-  row-gap: 5rem;
+  width: 100%;
 }
 
 .project-card {
@@ -523,25 +560,26 @@ section {
     position: absolute;
     top: 100%;
     right: 0;
-    width: 50%;
-    padding: 1rem 3rem;
-    background: rgba(0, 0, 0, 0.8);
-    border-bottom-left-radius: 2rem;
-    border-left: 2px solid var(--main-color);
+    width: 100%;
+    padding: 2rem 2.5rem;
+    background: rgba(8, 8, 8, 0.98);
+    backdrop-filter: blur(10px);
     border-bottom: 2px solid var(--main-color);
     display: none;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 
   .navbar a {
     display: block;
-    font-size: 2rem;
-    margin: 3rem 0;
+    font-size: 2.2rem;
+    margin: 1rem 0;
     color: var(--text-color);
+    text-align: left;
   }
 
-
   .navbar.active {
-    display: block;
+    display: flex;
   }
 
   .gradient-btn {
@@ -569,7 +607,7 @@ section {
   }
 
   .heading {
-    font-size: 5rem;
+    margin: 3rem 0;
   }
 
   .contact-container {

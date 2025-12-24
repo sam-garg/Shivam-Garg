@@ -26,7 +26,7 @@ const form = document.querySelector('form');
 const formMsg = document.getElementById('form-msg');
 
 if (form) {
-  form.addEventListener('submit', function(e) {
+  form.addEventListener('submit', function (e) {
     e.preventDefault();
     const submitBtn = form.querySelector('input[type="submit"], button[type="submit"]');
     if (submitBtn) {
