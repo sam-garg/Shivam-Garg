@@ -5,405 +5,591 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Fonts -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
   <!-- Basic SEO/OG -->
   <meta name="description"
-    content="Shivam Garg — Software Developer (AI/ML, Data, Python). Portfolio, projects, and contact." />
-  <meta property="og:title" content="Shivam Garg — Software Developer" />
-  <meta property="og:description" content="AI/ML • Data • Python — projects and contact." />
+    content="Shivam Garg — AI/ML, Data & Python Engineer. Discover interactive projects, machine learning workflows, and data analytics tools." />
+  <meta property="og:title" content="Shivam Garg — AI/ML & Software Engineer" />
+  <meta property="og:description"
+    content="AI/ML • Data • Python — Crafting intelligent automation systems and analytics pipelines." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="Shivam-garg.jpg" />
 
-  <title>Shivam Garg's Website</title>
+  <title>Shivam Garg — AI/ML & Software Engineer</title>
   <link rel="icon" href="Assests/favicon.svg" type="image/svg+xml">
+
+  <!-- Icon Libraries -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v5/font/simple-icons.min.css" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="timeline.css" />
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <a class="skip-link" href="#main"
-    style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
+  <!-- Dynamic Glow Background Elements -->
+  <div class="glow-bg-element element-1"></div>
+  <div class="glow-bg-element element-2"></div>
 
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header Section -->
   <header class="header">
     <a href="#home" class="logo">
-      Shivam <span>Garg</span>
+      Shivam<span>.Garg</span>
     </a>
 
     <button class="bx bx-menu" id="menu-icon" aria-expanded="false" aria-label="Toggle menu"
       aria-controls="site-nav"></button>
 
-    <nav class="navbar">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#projects">Projects</a>
-      <a href="#achievements">Achievements</a>
-      <a href="#contact">Contact</a>
+    <nav class="navbar" id="site-nav">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#achievements" class="nav-link">Achievements</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <!-- <a href="v1/index.html" class="nav-link rollback-btn" title="View classic v1 portfolio layout">Classic View ↺</a> -->
     </nav>
 
-    <a href="#contact" class="gradient-btn">Contact Me</a>
+    <a href="#contact" class="gradient-btn">Get In Touch</a>
   </header>
 
-  <section class="home" id="home">
-    <div class="home-content">
-      <h1>Hi, It's <span>Shivam</span></h1>
-      <h3>
-        I'm a <span>Software Developer and Engineer</span>
-      </h3>
-      <p>AI/ML & Computer Vision Developer crafting intelligent systems using Python, OpenCV & LLMs.</p>
+  <main id="main">
+    <!-- Hero Section -->
+    <section class="home" id="home">
+      <div class="home-content">
+        <div class="badge">
+          <span class="badge-dot"></span> Available for Work & Collaboration
+        </div>
+        <h1>Hi, I'm <span class="highlight">Shivam Garg</span></h1>
+        <h3 class="subtitle">
+          I'm a <span id="typed-text">AI/ML & Python Developer</span><span class="cursor">|</span>
+        </h3>
+        <p class="hero-desc">
+          Crafting intelligent systems using computer vision, generative AI, and advanced data automation. Focused on
+          bridging the gap between raw data and actionable user experiences.
+        </p>
+
+        <div class="social-icons">
+          <a href="https://github.com/sam-garg" target="_blank" aria-label="GitHub Profile">
+            <i class="bx bxl-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/shivaaam-garg" target="_blank" aria-label="LinkedIn Profile">
+            <i class="bx bxl-linkedin-square"></i>
+          </a>
+          <a href="https://leetcode.com/u/Shivam-60/" target="_blank" aria-label="LeetCode Profile">
+            <i class="si si-leetcode"></i>
+          </a>
+          <a href="https://www.hackerrank.com/profile/samgarg999" target="_blank" aria-label="HackerRank Profile">
+            <i class="si si-hackerrank"></i>
+          </a>
+        </div>
+
+        <div class="btn-group">
+          <a href="#contact" class="btn btn-primary">Let's Build Together</a>
+          <a href="Assests/Shivam_Garg_Resume.pdf" class="btn btn-secondary" target="_blank">View Resume <i
+              class="bx bx-right-top-arrow-circle"></i></a>
+        </div>
+      </div>
+
+      <div class="home-img-container">
+        <div class="home-img-wrapper">
+          <div class="glow-ring"></div>
+          <div class="home-img">
+            <!-- Falling back to beautiful custom avatar placeholder if image is missing -->
+            <div class="avatar-fallback">
+              <i class="bx bx-code-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About & Timeline Section -->
+    <section class="about" id="about">
+      <div class="section-header">
+        <h2 class="heading">Education & <span>Journey</span></h2>
+        <p class="section-subtitle">Academic foundations and timelines driving my technical expertise.</p>
+      </div>
+
+      <div class="about-container">
+        <div class="timeline">
+
+          <div class="timeline-card reveal-on-scroll">
+            <div class="timeline-marker">
+              <div class="marker-dot"></div>
+              <div class="marker-line"></div>
+            </div>
+            <div class="timeline-card-content">
+              <span class="timeline-card-date">2023 - 2025</span>
+              <h3>Master of Computer Applications (MCA)</h3>
+              <span class="timeline-inst">Vivekanand Institute of Professional Studies - TC</span>
+              <p>Specialized in advanced computing, software architectures, algorithms, and applied machine learning
+                methodologies.</p>
+              <div class="timeline-badge">9.0 CGPA</div>
+            </div>
+          </div>
+
+          <div class="timeline-card reveal-on-scroll">
+            <div class="timeline-marker">
+              <div class="marker-dot"></div>
+              <div class="marker-line"></div>
+            </div>
+            <div class="timeline-card-content">
+              <span class="timeline-card-date">2020 - 2023</span>
+              <h3>Bachelor of Computer Applications (BCA)</h3>
+              <span class="timeline-inst">Institute of Innovation in Management and Technology</span>
+              <p>Acquired strong foundations in databases, object-oriented programming, data structures, and statistical
+                modeling.</p>
+              <div class="timeline-badge">8.7 CGPA</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section" id="skills">
+      <div class="section-header">
+        <h2 class="heading">Technical <span>Expertise</span></h2>
+        <p class="section-subtitle">The tools, languages, and frameworks I leverage to solve complex problems.</p>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skills-category-card reveal-on-scroll">
+          <div class="category-icon"><i class="bx bx-code-curly"></i></div>
+          <h3>Languages</h3>
+          <div class="skills-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">HTML5 / CSS3</span>
+          </div>
+        </div>
+
+        <div class="skills-category-card reveal-on-scroll">
+          <div class="category-icon"><i class="bx bx-brain"></i></div>
+          <h3>AI / ML & Vision</h3>
+          <div class="skills-tags">
+            <span class="skill-tag">OpenCV</span>
+            <span class="skill-tag">Gemini API</span>
+            <span class="skill-tag">LangChain</span>
+            <span class="skill-tag">Llama 3</span>
+            <span class="skill-tag">Prompt Engineering</span>
+            <span class="skill-tag">Ollama</span>
+            <span class="skill-tag">NLP</span>
+          </div>
+        </div>
+
+        <div class="skills-category-card reveal-on-scroll">
+          <div class="category-icon"><i class="bx bx-bar-chart-square"></i></div>
+          <h3>Data & Analytics</h3>
+          <div class="skills-tags">
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">NumPy</span>
+            <span class="skill-tag">PowerBI</span>
+            <span class="skill-tag">Matplotlib</span>
+            <span class="skill-tag">Seaborn</span>
+            <span class="skill-tag">EDA Pipelines</span>
+          </div>
+        </div>
+
+        <div class="skills-category-card reveal-on-scroll">
+          <div class="category-icon"><i class="bx bx-wrench"></i></div>
+          <h3>Tools & DevEnv</h3>
+          <div class="skills-tags">
+            <span class="skill-tag">Git & GitHub</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">Google Colab</span>
+            <span class="skill-tag">Streamlit</span>
+            <span class="skill-tag">Jupyter</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+      <div class="section-header">
+        <h2 class="heading">Services I <span>Offer</span></h2>
+        <p class="section-subtitle">Delivering high-value technical solutions tailored to modern business workflows.</p>
+      </div>
+
+      <div class="service-container">
+
+        <div class="service-box reveal-on-scroll">
+          <div class="service-card-glow"></div>
+          <div class="service-info">
+            <i class="bx bxl-python"></i>
+            <h4>Python Automation & Vision</h4>
+            <p>Developing hand tracking, gesture control interfaces, custom computer vision algorithms with OpenCV, and
+              automated real-time scripts.</p>
+          </div>
+        </div>
+
+        <div class="service-box reveal-on-scroll">
+          <div class="service-card-glow"></div>
+          <div class="service-info">
+            <i class="bx bx-brain"></i>
+            <h4>AI/ML & LLM Orchestration</h4>
+            <p>Building customized multi-agent LLM systems with LangChain, optimizing local model deployments, and
+              engineering domain-specific assistants.</p>
+          </div>
+        </div>
+
+        <div class="service-box reveal-on-scroll">
+          <div class="service-card-glow"></div>
+          <div class="service-info">
+            <i class="bx bx-bar-chart-alt-2"></i>
+            <h4>Data Engineering & Analytics</h4>
+            <p>Creating automated ETL pipelines, performing exploratory data analyses, and designing interactive PowerBI
+              dashboards to convey key business insights.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+      <div class="section-header">
+        <h2 class="heading">Featured <span>Projects</span></h2>
+        <p class="section-subtitle">A curated showcase of codebases, experiments, and production-ready applications.</p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="aiml">AI & Agents</button>
+        <button class="filter-btn" data-filter="cv">Computer Vision</button>
+        <button class="filter-btn" data-filter="data">Data & Trading</button>
+      </div>
+
+      <div class="project-box">
+
+        <!-- Project 1 -->
+        <div class="project-card reveal-on-scroll" data-category="aiml">
+          <div class="project-img-container">
+            <img src="Assests/project1.png" alt="Multi-Agent AI Research Assistant Preview"
+              onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&auto=format&fit=crop&q=60'">
+            <div class="project-overlay">
+              <span class="project-category-tag">Generative AI</span>
+            </div>
+          </div>
+          <div class="project-details">
+            <h3>Multi-Agent AI Research Assistant</h3>
+            <p>Engineered a multi-agent orchestration architecture (Planner, Search, Synthesizer) powered by the Gemini
+              API. Automates long-form research, synthesizing raw retrieval queries into structured Markdown reports.
+            </p>
+            <div class="card-tags">
+              <span>Python</span>
+              <span>Gemini API</span>
+              <span>Multi-Agent</span>
+            </div>
+            <a href="https://colab.research.google.com/drive/1--viRBNg_vQ9dkzdj6oa3nh6vEpagZnG?usp=sharing"
+              target="_blank" class="btn project-btn">
+              Explore Project <i class="bx bx-link-external"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card reveal-on-scroll" data-category="cv">
+          <div class="project-img-container">
+            <img src="Assests/project2.png" alt="Neo Drive Preview"
+              onerror="this.src='https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&auto=format&fit=crop&q=60'">
+            <div class="project-overlay">
+              <span class="project-category-tag">Computer Vision</span>
+            </div>
+          </div>
+          <div class="project-details">
+            <h3>Neo Drive – Gesture-Based Driving</h3>
+            <p>A hands-free driving simulation controller utilizing real-time computer vision. Maps hand and body
+              gestures into precise acceleration, braking, and steering configurations using OpenCV.</p>
+            <div class="card-tags">
+              <span>Python</span>
+              <span>OpenCV</span>
+              <span>MediaPipe</span>
+            </div>
+            <a href="https://github.com/sam-garg/NeoDrive" target="_blank" class="btn project-btn">
+              GitHub Repo <i class="bx bxl-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card reveal-on-scroll" data-category="data">
+          <div class="project-img-container">
+            <img src="Assests/project3.png" alt="YouTube Data Analysis Preview"
+              onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop&q=60'">
+            <div class="project-overlay">
+              <span class="project-category-tag">Data Science</span>
+            </div>
+          </div>
+          <div class="project-details">
+            <h3>YouTube Data Collection & EDA</h3>
+            <p>An automated collection pipeline targeting trending video metadata. Extracts, cleans, and generates
+              visualization models (Pandas/Matplotlib) detailing optimal publication parameters.</p>
+            <div class="card-tags">
+              <span>Python</span>
+              <span>Pandas</span>
+              <span>YouTube API</span>
+            </div>
+            <a href="https://colab.research.google.com/drive/1jz5dPo5Z6VlQr_7YtDuokTNT_vlJ_HV2?usp=sharing"
+              target="_blank" class="btn project-btn">
+              Explore Analysis <i class="bx bx-link-external"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card reveal-on-scroll" data-category="data">
+          <div class="project-img-container">
+            <img src="Assests/project4.png" alt="Stock Trading Bot Preview"
+              onerror="this.src='https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&auto=format&fit=crop&q=60'">
+            <div class="project-overlay">
+              <span class="project-category-tag">Fintech</span>
+            </div>
+          </div>
+          <div class="project-details">
+            <h3>Automated Stock Trading Bot</h3>
+            <p>Executes algorithmic buy/sell triggers calculated via real-time market technical indicators. Integrates
+              testnet accounts for continuous execution testing and risk metrics analysis.</p>
+            <div class="card-tags">
+              <span>Python</span>
+              <span>APIs</span>
+              <span>Backtesting</span>
+            </div>
+            <a href="https://github.com/sam-garg/Stock_Trading_Bot" target="_blank" class="btn project-btn">
+              GitHub Repo <i class="bx bxl-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card reveal-on-scroll" data-category="aiml">
+          <div class="project-img-container">
+            <img src="Assests/project5.png" alt="Solar Assistant Preview"
+              onerror="this.src='https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&auto=format&fit=crop&q=60'">
+            <div class="project-overlay">
+              <span class="project-category-tag">Chatbots</span>
+            </div>
+          </div>
+          <div class="project-details">
+            <h3>Solar Industry AI Assistant</h3>
+            <p>A web-hosted Streamlit chatbot for solar installers and homeowners. Incorporates Gemini 2.5 Flash with
+              mock/live API switching, delivering context-aware hardware guidelines.</p>
+            <div class="card-tags">
+              <span>Streamlit</span>
+              <span>Gemini Flash</span>
+              <span>Python</span>
+            </div>
+            <a href="https://github.com/sam-garg/SolarAI-Assistant" target="_blank" class="btn project-btn">
+              GitHub Repo <i class="bx bxl-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card reveal-on-scroll" data-category="aiml">
+          <div class="project-img-container">
+            <img src="Assests/project7.png" alt="Text-to-SQL Agent Preview"
+              onerror="this.src='https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=600&auto=format&fit=crop&q=60'">
+            <div class="project-overlay">
+              <span class="project-category-tag">Databases</span>
+            </div>
+          </div>
+          <div class="project-details">
+            <h3>Dynamic Text-to-SQL Agent</h3>
+            <p>Converts natural language input queries into optimized relational database queries using Llama 3 and
+              LangChain. Builds in-memory tables directly from uploaded CSV sources.</p>
+            <div class="card-tags">
+              <span>LangChain</span>
+              <span>Llama 3</span>
+              <span>SQLite</span>
+            </div>
+            <a href="https://github.com/sam-garg/sql_text_app" target="_blank" class="btn project-btn">
+              GitHub Repo <i class="bx bxl-github"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="achievements" id="achievements">
+      <div class="section-header">
+        <h2 class="heading">Key <span>Achievements</span></h2>
+        <p class="section-subtitle">Verifiable awards, hackathon highlights, and professional simulations.</p>
+      </div>
+
+      <div class="achievements-container">
+
+        <div class="achievement-card reveal-on-scroll">
+          <div class="achievement-icon">
+            <i class="bx bx-trophy"></i>
+          </div>
+          <h3>Hackathon Winner</h3>
+          <p class="award-inst">Secured 1st Place — HackVSIT 2025</p>
+          <p class="award-desc">Awarded for designing and showcasing the gesture-driven Neo Drive hands-free system
+            under intense timelines.</p>
+        </div>
+
+        <div class="achievement-card reveal-on-scroll">
+          <div class="achievement-icon">
+            <i class="bx bxs-certification"></i>
+          </div>
+          <h3>Oracle Cloud AI Certified</h3>
+          <p class="award-inst">Oracle Cloud Infrastructure (OCI)</p>
+          <p class="award-desc">OCI AI Foundation Associate (2025). Certified in cloud architecture, machine learning
+            structures, and generative AI services.</p>
+        </div>
+
+        <div class="achievement-card reveal-on-scroll">
+          <div class="achievement-icon">
+            <i class="bx bx-laptop"></i>
+          </div>
+          <h3>Data Analytics Simulation</h3>
+          <p class="award-inst">Tata Group on Forage</p>
+          <p class="award-desc">Conducted structural quality evaluations, risk modeling, and generated predictive
+            analytics setups using GenAI utilities.</p>
+        </div>
+
+        <div class="achievement-card reveal-on-scroll">
+          <div class="achievement-icon">
+            <i class="bx bx-analyse"></i>
+          </div>
+          <h3>GenAI Chatbot Simulation</h3>
+          <p class="award-inst">BCG on Forage</p>
+          <p class="award-desc">Extracted and structured core financial metrics from SEC documents (10-K/10-Q) to feed a
+            rule-based query-parsing assistant.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="section-header">
+        <h2 class="heading">Let's <span>Collaborate</span></h2>
+        <p class="section-subtitle">Reach out for projects, job opportunities, or just to say hello.</p>
+      </div>
+
+      <div class="contact-container reveal-on-scroll">
+        <div class="contact-info">
+          <h3>Have an idea?</h3>
+          <p>Drop a line if you want to explore building something unique, automate workflows with AI agents, or process
+            data streams. I'm always open to new integrations.</p>
+
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="bx bxs-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                <a href="mailto:samgarg999@gmail.com">samgarg999@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="bx bxs-phone"></i>
+              <div>
+                <h4>Phone</h4>
+                <a href="tel:+919911694049">+91-9911694049</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="bx bxs-map"></i>
+              <div>
+                <h4>Location</h4>
+                <span>New Delhi, India</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form action="https://formspree.io/f/mzzkqrqv" method="POST" class="contact-form">
+          <div id="form-msg" role="status" aria-live="polite"></div>
+
+          <input type="hidden" name="_replyto" value="samgarg999@gmail.com">
+
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" name="name" id="name-input" class="form-control" required placeholder=" ">
+              <label for="name-input">Full Name</label>
+            </div>
+
+            <div class="form-group">
+              <input type="email" name="email" id="email-input" class="form-control" required placeholder=" ">
+              <label for="email-input">Email Address</label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <input type="tel" name="phone" id="phone-input" class="form-control" placeholder=" ">
+              <label for="phone-input">Phone Number (Optional)</label>
+            </div>
+
+            <div class="form-group">
+              <input type="text" name="subject" id="subject-input" class="form-control" required placeholder=" ">
+              <label for="subject-input">Subject</label>
+            </div>
+          </div>
+
+          <div class="form-group textarea-group">
+            <textarea name="message" id="message-input" class="form-control" required placeholder=" "
+              rows="6"></textarea>
+            <label for="message-input">Your Message</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary submit-btn">
+            Send Message <i class="bx bxs-send"></i>
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-content">
+      <a href="#home" class="logo">
+        Shivam<span>.Garg</span>
+      </a>
+
+      <nav class="footer-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
       <div class="social-icons">
-
-        <a href="https://leetcode.com/u/Shivam-60/">
-          <i class="si si-leetcode"></i>
-        </a>
-
-        <a href="https://www.hackerrank.com/profile/samgarg999">
-          <i class="si si-hackerrank"></i>
-        </a>
-
-        <a href="https://github.com/sam-garg">
-          <i class="bx bxl-github"></i>
-        </a>
-
-        <a href="https://www.linkedin.com/in/shivaaam-garg">
-          <i class="bx bxl-linkedin-square"></i>
-        </a>
+        <a href="https://github.com/sam-garg" target="_blank" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+        <a href="https://www.linkedin.com/in/shivaaam-garg" target="_blank" aria-label="LinkedIn"><i
+            class="bx bxl-linkedin-square"></i></a>
+        <a href="https://leetcode.com/u/Shivam-60/" target="_blank" aria-label="LeetCode"><i
+            class="si si-leetcode"></i></a>
+        <a href="https://www.hackerrank.com/profile/samgarg999" target="_blank" aria-label="HackerRank"><i
+            class="si si-hackerrank"></i></a>
       </div>
 
-      <div class="btn-group">
-        <a href="https://www.linkedin.com/in/shivaaam-garg" class="btn">Let's Build Something</a>
-        <a href="Assests/Shivam_Garg_Resume.pdf" class="btn" target="_blank">Resume</a>
-      </div>
+      <p class="copyright">
+        &copy; 2026 Shivam Garg. All Rights Reserved.
+      </p>
     </div>
-
-    <div class="home-img">
-      <!-- <img src="Shivam_garg.jpg" alt="Shivam Garg — Software Developer" loading="lazy"> -->
-    </div>
-  </section>
-
-  <section class="about" id="about">
-    <h2 class="heading">Education & <span>Experience</span></h2>
-
-    <div class="timeline-items">
-
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">2023 - 2025</div>
-        <div class="timeline-content">
-          <h3>Master of Computer Applications (MCA)</h3>
-          <p>Vivekanand Institute of Professional Studies - Technical Campus</p>
-          <p>Grade: 9.0 CGPA</p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">2020 - 2023</div>
-        <div class="timeline-content">
-          <h3>Bachelor of Computer Applications (BCA)</h3>
-          <p>Institute of Innovation in Management and Technology</p>
-          <p>Grade: 8.7 CGPA</p>
-        </div>
-      </div>
-
-      <!-- <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">2020 - 2023</div>
-        <div class="timeline-content">
-          <h3>Bachelor of Computer Applications (BCA)</h3>
-          <p>Institute of Innovation in Management and Technology</p>
-          <p>Grade: 8.7 CGPA</p>
-        </div>
-      </div> -->
-    </div>
-  </section>
-
-  <section class="services" id="services">
-
-    <h2 class="heading">Services</h2>
-
-    <div class="service-container">
-      <div class="service-box">
-        <div class="service-info">
-          <i class="bx bxl-python"></i>
-          <h4>Python Development</h4>
-          <p>Hand tracking, object detection, gesture recognition, image analytics, and real-time prediction systems.
-          </p>
-        </div>
-      </div>
-
-
-      <div class="service-box">
-        <div class="service-info">
-          <i class="bx bx-brain"></i>
-          <h4>Artificial Intelligence & Machine Learning</h4>
-          <p>Custom ML models, training pipelines, and data workflows tailored to solve real business problems.
-            Automating research, reporting, and decision-making using multi-agent LLM architectures.
-          </p>
-        </div>
-      </div>
-
-
-      <div class="service-box">
-        <div class="service-info">
-          <i class="bx bx-bar-chart-alt-2"></i>
-          <h4>Data Analysis</h4>
-          <p>Interactive dashboards using PowerBI, Pandas & Matplotlib to turn raw data into insights.</p>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-  <section class="projects" id="projects">
-
-    <h2 class="heading">Projects</h2>
-
-    <div class="project-box">
-
-      <div class="project-card">
-        <img src="Assests/project1.png" alt="">
-
-        <h3>Multi-Agent AI Research Assistant</h3>
-
-        <p>Engineered and orchestrated a multi-agent system (Planner, Search, Synthesizer) using Python and the Gemini
-          API to collaboratively generate structured research reports, implementing prompt-driven planning and real-time
-          data retrieval via Gemini tool APIs to automate complex workflows and synthesize raw data into actionable
-          insights.</p>
-        <a href="https://colab.research.google.com/drive/1--viRBNg_vQ9dkzdj6oa3nh6vEpagZnG?usp=sharing" target="_blank"
-          class="btn">Review Project</a>
-      </div>
-
-      <div class="project-card">
-        <img src="Assests/project2.png" alt="">
-
-        <h3>Neo Drive – Gesture-Based Driving System</h3>
-
-        <p>Designed and developed the hands-free Neo Drive simulation system using Python, OpenCV, and Computer Vision
-          to successfully replace traditional controllers by accurately mapping leg and hand gestures into real-time
-          acceleration, braking, and steering commands, significantly improving accessibility and human-computer
-          interaction.</p>
-        <a href="https://github.com/sam-garg/NeoDrive" class="btn" target="_blank">Review Project</a>
-      </div>
-
-      <div class="project-card">
-        <img src="Assests/project3.png" alt="">
-
-        <h3>YouTube Data Collection & Analysis</h3>
-
-        <p>Built a complete data pipeline using Python, YouTube Data API v3, and Pandas to fetch and preprocess metadata
-          from the top 200 trending YouTube videos; conducted comprehensive Exploratory Data Analysis (EDA) and
-          visualized findings with Matplotlib/Seaborn, delivering actionable recommendations like an optimal video
-          length (< 5 min) and a best publishing window (2 PM–8 PM) to maximize audience engagement.</p>
-
-            <a href="https://colab.research.google.com/drive/1jz5dPo5Z6VlQr_7YtDuokTNT_vlJ_HV2?usp=sharing" class="btn"
-              target="_blank">Review Project</a>
-      </div>
-
-      <div class="project-card">
-        <img src="Assests/project4.png" alt="">
-
-        <h3>Stock trading Bot</h3>
-
-        <p>Developed an automated trading system using Python to execute buy/sell orders based on technical indicators
-          using testnet(Demo A/c) and real-time market data. Implemented backtesting capabilities to evaluate strategy
-          performance and integrated brokerage APIs for seamless live trading operations.</p>
-        <a href="https://github.com/sam-garg/Stock_Trading_Bot" class="btn" target="_blank">Review Project</a>
-      </div>
-
-      <!-- <div class="project-card">
-        <img src="Assests/DA.png" alt="">
-        
-        <h3>Personal AI Data Analyst</h3>
-        
-        <p>Engineered a Personal AI Data Analyst platform to solve the LLM hallucination problem by implementing a
-          Reason-Execute architecture that translates natural language queries into mathematically precise Python
-          (Pandas, Streamlit, Matplotlib) code; this approach ensures accurate computational analysis, visualization
-          (histograms, heatmaps), and summarization of complex flat files (CSV, Excel, JSON)</p>
-        <div class="btn">Review Project</div>
-      </div> -->
-
-      <div class="project-card">
-        <img src="Assests/project5.png" alt="">
-
-        <h3>Solar AI-Assistant</h3>
-
-        <p>Engineered a domain-specific AI chatbot for the solar industry using Streamlit and the Gemini 2.5 Flash
-          model. Implemented a dual-mode architecture (Mock vs. Live API) to ensure robust demonstration capabilities
-          and utilized advanced prompt engineering to deliver accurate technical data to both homeowners and engineers.
-        </p>
-        <a href="https://github.com/sam-garg/SolarAI-Assistant" class="btn" target="_blank">Review Project</a>
-      </div>
-
-      <div class="project-card">
-        <img src="Assests/project7.png" alt="Dynamic Text-to-SQL Agent">
-
-        <h3>Dynamic Text-to-SQL Agent</h3>
-
-        <p>Engineered a high-performance data analysis tool that translates natural language questions into optimized
-          SQL queries using Llama 3 and LangChain. The system dynamically builds relational databases from uploaded CSV
-          files, enabling instant insights—averages, filtering, and complex groupings—all while ensuring data privacy
-          through local processing via Ollama.</p>
-        <a href="https://github.com/sam-garg/sql_text_app" class="btn" target="_blank">Review Project</a>
-      </div>
-
-      <!-- <div class="project-card">
-        <img src="Assests/project6.png" alt="">
-
-        <h3>Local AI Voice Assistant with Llama 3</h3>
-
-        <p>A Python-based voice assistant that enables hands-free, conversational interaction with advanced AI. Unlike
-          standard cloud-based assistants, this project leverages Ollama to run the Llama 3 model locally, ensuring
-          lower latency and greater privacy. The system features a continuous feedback loop that listens for voice
-          commands, processes natural language queries, and responds with synthesized speech in real-time.</p>
-        <div class="btn">Review Project</div>
-      </div> -->
-
-    </div>
-
-  </section>
-
-  <section class="achievements" id="achievements">
-    <h2 class="heading">Achievements & <span>Certifications</span></h2>
-
-    <div class="service-container">
-      <div class="service-box" style="height: auto; min-height: 300px;">
-        <div class="service-info" style="padding: 3rem;">
-          <i class="bx bx-trophy"></i>
-          <h4>Hackathon Winner</h4>
-          <p>Secured 1st place in HackVSIT Hackathon 2025 by developing an Gesture-Based Driving System.</p>
-        </div>
-      </div>
-
-      <div class="service-box" style="height: auto; min-height: 300px;">
-        <div class="service-info" style="padding: 3rem;">
-          <i class="bx bxs-certification"></i>
-          <h4>Oracle Cloud AI Certified</h4>
-          <p>Oracle Cloud AI Foundation Associate (2025).</p>
-        </div>
-      </div>
-
-      <div class="service-box" style="height: auto; min-height: 300px;">
-        <div class="service-info" style="padding: 3rem;">
-          <i class="bx bxs-certification"></i>
-          <h4>Tata Group Data Analytics Job Simulation on Forage</h4>
-          <p>Conducted exploratory data analysis (EDA) using GenAI tools to assess data quality, identify risk
-            indicators, and structure insights for predictive modeling.</p>
-        </div>
-      </div>
-
-      <div class="service-box" style="height: auto; min-height: 300px;">
-        <div class="service-info" style="padding: 3rem;">
-          <i class="bx bxs-certification"></i>
-          <h4>BCG GenAI Job Simulation on Forage</h4>
-          <p>Integrated and interpreted complex financial data from 10-K and 10-Q reports, employing rule-based logic to
-            create a chatbot that provides user-friendly financial insights and analysis.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <h2 class="heading">Contact <span>Me</span></h2>
-
-    <div class="contact-container">
-      <div class="contact-info">
-        <h3>Let's Collaborate</h3>
-        <p>Have an idea or want to discuss Anything specific? Send me a message, and I'll get back to you as soon as
-          possible.</p>
-
-        <div class="contact-details">
-          <div class="contact-item">
-            <i class="bx bxs-envelope"></i>
-            <span>samgarg999@gmail.com</span>
-          </div>
-          <div class="contact-item">
-            <i class="bx bxs-phone"></i>
-            <span>+91-9911694049</span>
-          </div>
-        </div>
-      </div>
-
-      <form action="https://formspree.io/f/mzzkqrqv" method="POST">
-        <div id="form-msg" role="status" aria-live="polite" style="min-height:2.4rem;margin-bottom:0.6rem"></div>
-
-        <input type="hidden" name="_replyto" value="samgarg999@gmail.com">
-
-        <div class="input-group">
-          <div class="input-box">
-            <input type="text" name="name" placeholder="Full Name" required>
-
-            <input type="email" name="email" placeholder="Email" required>
-          </div>
-
-          <div class="input-box">
-            <input type="number" name="phone" placeholder="Phone Number">
-
-            <input type="text" name="subject" placeholder="Subject" required>
-          </div>
-
-        </div>
-        <div class="input-group-2">
-
-          <textarea name="message" id="" placeholder="Your Message" cols="35" rows="10" required></textarea>
-          <input type="submit" value="Send Message" class="btn">
-
-        </div>
-      </form>
-    </div>
-
-  </section>
-
-  <footer class="footer">
-
-    <div class="social-icons">
-
-      <a href="https://leetcode.com/u/Shivam-60/">
-        <i class="si si-leetcode"></i>
-      </a>
-
-      <a href="https://www.hackerrank.com/profile/samgarg999">
-        <i class="si si-hackerrank"></i>
-      </a>
-
-      <a href="https://github.com/sam-garg">
-        <i class="bx bxl-github"></i>
-      </a>
-
-      <a href="https://www.linkedin.com/in/shivaaam-garg">
-        <i class="bx bxl-linkedin-square"></i>
-      </a>
-    </div>
-
-    <ul class="list">
-      <li>
-        <a href="#about">About</a>
-      </li>
-      <li>
-        <a href="#services">Services</a>
-      </li>
-      <li>
-        <a href="#projects">Projects</a>
-      </li>
-      <li>
-        <a href="#achievements">Achievements</a>
-      </li>
-      <li>
-        <a href="#contact">Contact</a>
-      </li>
-    </ul>
-
-    <p class="copyright">
-      © Shivam Garg | All Rights Reserved
-    </p>
-
   </footer>
 
   <script src="script.js"></script>
