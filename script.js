@@ -315,7 +315,7 @@ function initContactForm() {
       body: formData,
       headers: { 'Accept': 'application/json' }
     })
-      .then(response => {
+      .then(async response => {
         if (response.ok) {
           formMsg.className = 'success';
           formMsg.textContent = 'Message sent successfully! I will reach out to you shortly.';
@@ -329,9 +329,28 @@ function initContactForm() {
             if (errorSpan) errorSpan.remove();
           });
         } else {
-          formMsg.className = 'error';
-          formMsg.textContent = 'Oops! There was a problem sending your message. Please try again.';
-          formMsg.style.display = 'block';
+          let errorData = null;
+          try {
+            errorData = await response.json();
+          } catch (e) {}
+
+          const isRecaptcha = errorData && (
+            (errorData.error && errorData.error.toLowerCase().includes('recaptcha')) ||
+            (errorData.errors && errorData.errors.some(err => err.code === 'TYPE_RECAPTCHA' || (err.message && err.message.toLowerCase().includes('recaptcha'))))
+          );
+
+          if (isRecaptcha) {
+            formMsg.className = 'info';
+            formMsg.textContent = 'Spam check required. Redirecting to verification page...';
+            formMsg.style.display = 'block';
+            setTimeout(() => {
+              form.submit();
+            }, 1500);
+          } else {
+            formMsg.className = 'error';
+            formMsg.textContent = errorData && errorData.error ? errorData.error : 'Oops! There was a problem sending your message. Please try again.';
+            formMsg.style.display = 'block';
+          }
         }
       })
       .catch(() => {
