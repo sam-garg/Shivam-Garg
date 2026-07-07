@@ -5,6 +5,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Content security policy tag -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' cdn.jsdelivr.net;
+    style-src 'self' 'unsafe-inline' fonts.googleapis.com cdn.jsdelivr.net;
+    font-src fonts.gstatic.com cdn.jsdelivr.net;
+    img-src 'self' data: https:;
+    form-action 'self' formspree.io;
+    frame-ancestors 'none';
+    upgrade-insecure-requests;
+  ">
+
+  <!-- HTTP Strict-Transport-Security (HSTS) header -->
+  <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -492,71 +507,48 @@
           <h3>Have an idea?</h3>
           <p>Drop a line if you want to explore building something unique, automate workflows with AI agents, or process
             data streams. I'm always open to new integrations.</p>
+        </div>
+      </div>
+      </div>
 
-          <div class="contact-details">
-            <div class="contact-item">
-              <i class="bx bxs-envelope"></i>
-              <div>
-                <h4>Email</h4>
-                <a href="mailto:samgarg999@gmail.com">samgarg999@gmail.com</a>
-              </div>
-            </div>
-            <div class="contact-item">
-              <i class="bx bxs-phone"></i>
-              <div>
-                <h4>Phone</h4>
-                <a href="tel:+919911694049">+91-9911694049</a>
-              </div>
-            </div>
-            <div class="contact-item">
-              <i class="bx bxs-map"></i>
-              <div>
-                <h4>Location</h4>
-                <span>New Delhi, India</span>
-              </div>
-            </div>
+      <form action="https://formspree.io/f/mzzkqrqv" method="POST" class="contact-form">
+        <div id="form-msg" role="status" aria-live="polite"></div>
+
+        <input type="hidden" name="_replyto" value="samgarg999@gmail.com">
+
+        <div class="form-row">
+          <div class="form-group">
+            <input type="text" name="name" id="name-input" class="form-control" required placeholder=" ">
+            <label for="name-input">Full Name</label>
+          </div>
+
+          <div class="form-group">
+            <input type="email" name="email" id="email-input" class="form-control" required placeholder=" ">
+            <label for="email-input">Email Address</label>
           </div>
         </div>
 
-        <form action="https://formspree.io/f/mzzkqrqv" method="POST" class="contact-form">
-          <div id="form-msg" role="status" aria-live="polite"></div>
-
-          <input type="hidden" name="_replyto" value="samgarg999@gmail.com">
-
-          <div class="form-row">
-            <div class="form-group">
-              <input type="text" name="name" id="name-input" class="form-control" required placeholder=" ">
-              <label for="name-input">Full Name</label>
-            </div>
-
-            <div class="form-group">
-              <input type="email" name="email" id="email-input" class="form-control" required placeholder=" ">
-              <label for="email-input">Email Address</label>
-            </div>
+        <div class="form-row">
+          <div class="form-group">
+            <input type="tel" name="phone" id="phone-input" class="form-control" placeholder=" ">
+            <label for="phone-input">Phone Number (Optional)</label>
           </div>
 
-          <div class="form-row">
-            <div class="form-group">
-              <input type="tel" name="phone" id="phone-input" class="form-control" placeholder=" ">
-              <label for="phone-input">Phone Number (Optional)</label>
-            </div>
-
-            <div class="form-group">
-              <input type="text" name="subject" id="subject-input" class="form-control" required placeholder=" ">
-              <label for="subject-input">Subject</label>
-            </div>
+          <div class="form-group">
+            <input type="text" name="subject" id="subject-input" class="form-control" required placeholder=" ">
+            <label for="subject-input">Subject</label>
           </div>
+        </div>
 
-          <div class="form-group textarea-group">
-            <textarea name="message" id="message-input" class="form-control" required placeholder=" "
-              rows="6"></textarea>
-            <label for="message-input">Your Message</label>
-          </div>
+        <div class="form-group textarea-group">
+          <textarea name="message" id="message-input" class="form-control" required placeholder=" " rows="6"></textarea>
+          <label for="message-input">Your Message</label>
+        </div>
 
-          <button type="submit" class="btn btn-primary submit-btn">
-            Send Message <i class="bx bxs-send"></i>
-          </button>
-        </form>
+        <button type="submit" class="btn btn-primary submit-btn">
+          Send Message <i class="bx bxs-send"></i>
+        </button>
+      </form>
       </div>
     </section>
   </main>

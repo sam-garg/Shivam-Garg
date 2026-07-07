@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sam-garg.github.io/Shivam-Garg/sitemap.xml
