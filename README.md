@@ -42,7 +42,6 @@ To run this project locally:
 - **Oracle Cloud AI Certified**: Foundation Associate (2025).
 
 ## 📬 Contact
-- **Email**: samgarg999@gmail.com
 - **LinkedIn**: [shivaaam-garg](https://www.linkedin.com/in/shivaaam-garg)
 - **GitHub**: [sam-garg](https://github.com/sam-garg)
 
