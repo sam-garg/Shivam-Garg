@@ -47,4 +47,4 @@ To run this project locally:
 - **GitHub**: [sam-garg](https://github.com/sam-garg)
 
 ---
-© 2025 Shivam Garg | All Rights Reserved.
+© 2026 Shivam Garg | All Rights Reserved.
